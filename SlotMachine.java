@@ -9,13 +9,6 @@
  * If three match, the customer wins thrice their bet.
  */
 
-/**
- * Notes to self:
- * This needs to test the input value for the bet amount
- * 
- * 
- * 
- * */
 
 // Importing scanner and random
 import java.util.Scanner;
@@ -45,9 +38,7 @@ public class SlotMachine {
     System.out.println("");
     System.out.println("Your spin is: ");
     System.out.println("");
-    System.out.println(firstOption);
-    System.out.println(secondOption);
-    System.out.println(thirdOption);
+    System.out.println(firstOption + "   " + secondOption + "   " + thirdOption);
     System.out.println("");
     
     // Gets payout
@@ -87,29 +78,12 @@ public class SlotMachine {
     Random rand = new Random();
     
     // Initializes randomized variable:
-    int randomChoice = rand.nextInt(5);
+    int randomChoice = rand.nextInt(6);
     String finalChoice = "Test value"; // This function throws an error if I don't initialize this first.
+    String[] possibleChoices = {"Cherry", "Orange", "Plum", "Bell", "Melon", "Bar"};
     
-    
-    if (randomChoice == 0) {
-      finalChoice = "Cherry";
-    }
-    if (randomChoice == 1) {
-      finalChoice = "Orange";
-    }
-    if (randomChoice == 2) {
-      finalChoice = "Plum";
-    }
-    if (randomChoice == 3) {
-      finalChoice = "Bell";
-    } 
-    if (randomChoice == 4) {
-      finalChoice = "Melon";
-    } 
-    if (randomChoice == 5) {
-      finalChoice = "Bar";
-     } // I attempted this initially as a switch statement, but didn't get far with that. I'll have to play with it some more.
-    
+    finalChoice = possibleChoices[randomChoice];
+
     return finalChoice;
   } // End of randOption
   
