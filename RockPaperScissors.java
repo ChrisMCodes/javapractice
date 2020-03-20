@@ -35,12 +35,14 @@ public class RockPaperScissors {
     String userHand = "";
     
     // The results variable
-    String thisRound = ""
+    String thisRound = "";
+    
     
     // main body of program
     while (playAgain.equals("YES") || playAgain.equals("Y")){
     
       userNum = getHand();
+      computerNum = rand.nextInt(3) + 1;
       
       computerHand = numToWord(computerNum);
       userHand = numToWord(userNum);
@@ -107,6 +109,7 @@ public class RockPaperScissors {
   // sets userNum variable in main body of program
   public static int getHand(){
     Scanner scan = new Scanner(System.in);
+    Random rand = new Random();
     int userNum = -1;
     
     while (userNum < 1){
@@ -126,9 +129,9 @@ public class RockPaperScissors {
       }
       catch (InputMismatchException e) {
         
-        System.out.println("Sorry! Something went wrong. Please restart the program and try again.");
-        userNum = 0;
-        break;
+        System.out.println("Sorry! Something went wrong. Your choice has defaulted to an automatically generated random value.");
+	userNum = rand.nextInt(3) + 1;
+	break;
         
       }
       
