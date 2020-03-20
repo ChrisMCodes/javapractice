@@ -6,6 +6,7 @@
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Arrays;
+import java.util.InputMismatchException;
 
 public class RockPaperScissors {
   
@@ -34,11 +35,7 @@ public class RockPaperScissors {
     String userHand = "";
     
     // The results variable
-    String thisRound = "";
-    
-    // The possible answers variable
-    String[] possibleAnswers = {"yes", "y", "no", "n"};
-    
+    String thisRound = ""
     
     // main body of program
     while (playAgain.equals("YES") || playAgain.equals("Y")){
@@ -127,9 +124,11 @@ public class RockPaperScissors {
         }
       
       }
-      catch (Exception e) {
+      catch (InputMismatchException e) {
         
         System.out.println("Sorry! Something went wrong. Please restart the program and try again.");
+        userNum = 0;
+        break;
         
       }
       
