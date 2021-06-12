@@ -1,3 +1,12 @@
+/*
+ *
+ * This is just a JavaFX
+ * practice app to figure
+ * out how to change between
+ * scenes on a click event.
+ *
+ */
+
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -7,6 +16,14 @@ import javafx.scene.layout.BorderPane;
 
 
 public class MultiWindowGUI extends Application {
+	
+	/*
+	 *
+	 * Lots of globals -- not very memory intensive,
+	 * so I used them to simplify the actual methods
+	 *
+	 *
+	 */
 	Button button1 = new Button("Click here to continue");
 	Button button2 = new Button("Next");
 	Button button3 = new Button("Keep going");
@@ -63,6 +80,7 @@ public class MultiWindowGUI extends Application {
 			primaryStage.show();
 			
 		} catch(Exception e) {
+			// catching for development purposes
 			e.printStackTrace();
 		}
 	}
