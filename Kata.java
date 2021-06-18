@@ -10,6 +10,9 @@ public class Kata {
         String finishedProduct = "";
 
         // convert ip to binary
+        // it may be possible to do this
+        // by converting to a string
+        // and using parseLong(x, 2)
         while (ip != 0) {
             bin = ip % 2;
             nums.add(bin);
